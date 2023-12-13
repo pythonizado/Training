@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app-proveedor</title>
+    
+<style> 
+
+    *{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 103%;
+        
+      
+    }
+  
+
+    body{
+     background:linear-gradient(#6AD3F8, #147799 ) no-repeat; 
+     background-size: 110%;
+     margin-left: 150px;
+     margin-top: 0%;
+     
+    }
+    div{
+        display: flex;
+        align-items:last baseline;
+
+    }
+    
+    input{
+        border-radius: 10px;
+        outline: none;
+    }
+    button{
+     border: 0cm;
+     background-image: linear-gradient() #959595, #5AA, #0155 ;
+     border-radius: 8px;
+     color: #ffffff;
+     display: flex;
+     padding: 4px;
+     cursor: pointer;
+     transition: 3ms;
+    }
+ 
+    button span{
+     background-color: #04506A;
+     padding: 16px 24px;
+     border-radius: 6px;
+     transition: 3ms;
+ 
+    }
+ 
+    button:hover span{
+     background: none;
+    }
+     
+    button:active{
+     transform: scale(0.9); 
+    }
+ 
+ </style>
+</head>
+<body>
+    <div>
+    <form action ="{{ url_for('provee') }}" method="post">
+        <br><br>
+        <input type="text" name="nombreEmpresa" placeholder=" Nombre empresa">
+        <br><br>
+        <input type="text" name="celular" placeholder=" Celular">
+        <br><br>
+        <input type="text" name="telefono" placeholder=" Teléfono">
+        <br><br>
+        <input type="text" name="personaContacto" placeholder=" Contacto">
+        <br><br>
+        <input type="text" name="razonSocial" placeholder=" Razón social">
+        <br><br>
+        <input type="text" name="rut" placeholder=" RUT">
+        <br><br><br>
+        <button><span>Guardar</span></button>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </form>
+    </div>
+</body>
+</html>

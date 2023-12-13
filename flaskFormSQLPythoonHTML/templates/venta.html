@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app-venta</title>
+</head>
+
+<style> 
+
+    *{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 103%;
+        
+      
+    }
+  
+
+    body{
+     background:linear-gradient(#6AD3F8, #147799 ) no-repeat; 
+     background-size: 110%;
+     margin-left: 150px;
+     margin-block-start: 0%;
+     margin-bottom: 100%;
+     margin-top:-50%;
+     
+     
+    }
+    div{
+        position: absolute;
+        margin-top: 10%;
+    }
+  /*  div{
+        display: flex;
+        align-items:last baseline;
+
+    }*/
+
+    tr{
+        margin-top: 0%;
+        margin-left: 5%;
+    }
+    label{
+        color: #1f1d36;
+    }
+    input{
+        border-radius: 10px;
+        outline: none;
+    }
+    button{
+     border: 0cm;
+     background-image: linear-gradient() #959595, #5AA, #0155 ;
+     border-radius: 8px;
+     color: #ffffff;
+     display: flex;
+     padding: 4px;
+     cursor: pointer;
+     transition: 3ms;
+    }
+ 
+    button span{
+     background-color: #04506A;
+     padding: 16px 24px;
+     border-radius: 6px;
+     transition: 3ms;
+ 
+    }
+ 
+    button:hover span{
+     background: none;
+    }
+     
+    button:active{
+     transform: scale(0.9); 
+    }
+    .output{
+        margin-top: 5%;
+        margin-left: 80%;  }
+ 
+ </style>
+
+
+<body>
+  <div>
+    <table border="0"> 
+        <form action ="{{ url_for('venta') }}" method="post"> <br>
+            
+            <tr>
+                <td><label for="a"> Producto</label></td> 
+                <td><input type="number" id="a" name="productoA" oninput="suma()" placeholder="id producto"></td> <br><br>
+            </tr>
+            <tr>    
+                <td><label for="cant_A"> Cantidad</label></td>
+                <td><input type="number" id="cant_A" name="cant_proA" oninput="suma()" placeholder="cantidad"></td><br><br>
+            </tr>
+            <tr>
+                <td><label for="b"> Producto</label></td>
+                <td><input type="number" id="b" name="productoB" oninput="suma()" placeholder="id producto"></td><br><br>
+            </tr>
+            <tr>
+                <td><label for="cant_B"> Cantidad</label></td>
+                <td><input type="number" id="cant_B" name="cant_proB" oninput="suma()" placeholder="cantidad"></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="c"> Producto</label></td>
+                <td><input type="number" id="c" name="productoC" oninput="suma()" placeholder="id producto"></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="cant_C"> Cantidad</label></td>
+                <td><input type="number" id="cant_C" name="cant_proC" oninput="suma()" placeholder="cacntidad"></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="d"> Producto</label></td>
+                <td><input type="number" id="d" name="productoD" oninput="suma()" placeholder="id producto"></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="cant_D">Cantidad</label></td>
+                <td><input type="number" id="cant_D" name="cant_proD" oninput="suma()" placeholder="cantidad"></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="e"> Producto</label></td>
+                <td><input type="number" id="e" name="productoE" oninput="suma()" placeholder="id producto"></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="cant_E"> Cantidad</label></td>
+                <td><input type="number" id="cant_E"name="cant_proE" oninput="suma()" placeholder="cantidad"></td><br><br>
+            </tr>
+            <tr>
+                <td><label for="f"> Producto</label></td>
+                <td><input type="number" id="f" name="productoF" oninput="suma()" placeholder="id producto"></td><br><br>
+            </tr>
+            <tr>
+                <td><label for="cant_F"> Cantidad</label></td>
+                <td><input type="number" id="cant_F" name="cant_proF" oninput="suma()" placeholder="cacntidad"></td><br><br>
+            </tr>
+            <tr>   
+                <td><label for="g"> Producto</label></td>
+                <td><input type="number" id="g" name="productoG" oninput="suma()" placeholder="id producto"></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="cant_G"> Cantidad</label></td>
+                <td><input type="number" id="cant_G" name="cant_proG" oninput="suma()" placeholder="cantidad"></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="h"> Producto</label></td>
+                <td><input type="number" id="h" name="productoH" oninput="suma()" placeholder="id producto"></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="cant_H"> Cantidad</label></td>
+                <td><input type="number" id="cant_H" name="cant_proH" oninput="suma()" placeholder="cantidad"></td><br><br>
+            </tr>
+            <tr>    
+                <td><label for="cliente"> Cliente </label></td>
+                <td><input type="number" id="cliente" name="cliente_compra" placeholder="id cliente"></td><br>
+            </tr>
+            <tr>    
+                <td><label for="desc"> Descripción </label></td>
+                <td><input type="text" id="desc" name="descripcion" placeholder="descripción"></td><br>
+            </tr>    
+    
+            <div class="output">        
+                <label class="output" for="tID"> Total </label>
+                <input type="number" class="output" name="total" id="totalID">
+                <button name='alert' class="output" onclick="alertaSuma()" > <span> Guardar </span> </button>
+            </div>
+        </form>
+    </table>
+</div>
+  
+    <script type="text/javascript">
+           
+        function suma(){
+            try{
+                var proA = parseInt(document.getElementById('a').value)||0,
+                cantA = parseInt(document.getElementById('cant_A').value)||0,
+                proB = parseInt(document.getElementById('b').value)||0,
+                cantB = parseInt(document.getElementById('cant_B').value)||0,
+                proC = parseInt(document.getElementById('c').value)||0,
+                cantC = parseInt(document.getElementById('cant_C').value)||0,
+                proD = parseInt(document.getElementById('d').value)||0,
+                cantD = parseInt(document.getElementById('cant_D').value)||0,
+                proE = parseInt(document.getElementById('e').value)||0,
+                cantE = parseInt(document.getElementById('cant_E').value)||0,
+                proF = parseInt(document.getElementById('f').value)||0,
+                cantF = parseInt(document.getElementById('cant_F').value)||0,
+                proG = parseInt(document.getElementById('g').value)||0,
+                cantG = parseInt(document.getElementById('cant_G').value)||0,
+                proH = parseInt(document.getElementById('h').value)||0,
+                cantH = parseInt(document.getElementById('cant_H').value)||0;
+                
+                var sumatoria = document.getElementById("totalID").value = proA*cantA+proB*cantB+proC*cantC+proD*cantD+proE*cantE+proF*cantF+proG*cantG+proH*cantH
+                
+            }
+            catch(e){
+            }
+        }
+    </script>
+        
+    <script>
+       try{
+        function alertaSuma(){
+            alert('Venta realizada con éxito')
+             }
+       }
+        catch(e){
+
+        }   
+    </script>
+    
+</body>
+</html>
