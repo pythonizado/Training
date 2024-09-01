@@ -5,7 +5,7 @@ ventana = Tk()
 ventana.geometry("500x500")
 
 
-#funcion para contar digitos, un caracter especifico, la cantidad de arrobas y letras 
+#funcion para contar digitos y letras devuelve una dupla
 def letrasNumeros(textito: StringVar, caracter: StringVar):
     digitos = 0
     letras = 0
@@ -18,7 +18,7 @@ def letrasNumeros(textito: StringVar, caracter: StringVar):
             caracteres +=1
         if i =='@':
             arroba +=1
-        if i.isdigit():
+        if i.isdigit():  
             digitos+=1
         elif i.isalpha():
             letras+=1
